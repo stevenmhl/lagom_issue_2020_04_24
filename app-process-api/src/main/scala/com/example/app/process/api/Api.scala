@@ -32,8 +32,4 @@ object Response {
       case o: Failure => (failureResponseFormat writes o).as[JsObject] + ("type", JsString("failure"))
     }
   )
-
-//  object Process extends JsonResponse[Process]
-//  object Processes extends JsonResponse[Seq[Process]]
-//  object String extends JsonResponse[String]
 }
